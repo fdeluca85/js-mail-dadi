@@ -27,9 +27,13 @@ for (let i = 0; i < accessList.length; i++){
         // console.log("benvenuto " + mailUtente);
     } 
 }  
+
+
 if (sentinella) {
-    // console.log('Benvenuto ' + mailUtente );
+    sentinella = "Benvenuto " + mailUtente;
+    console.log('Benvenuto ' + mailUtente );
 } else {
-    // console.log('non in lista');
+    sentinella = mailUtente + " Non in lista" ;
+    console.log('non in lista');
 }
-container.innerHTML = "Benvenuto " + mailUtente;
+container.innerHTML = sentinella;
