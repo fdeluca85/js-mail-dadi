@@ -13,31 +13,38 @@
     // console.log(pc);
 
     
-    const giocatore = "giocatore"
-    const pc = "pc"
+    // const giocatore = "giocatore"
+    // const pc = "pc"
 
-
-    const numeroGiocatore = Math.floor(Math.random() * 6) + 1;
-        console.log("numero del giocatore " + numeroGiocatore);
-        
-        document.getElementById("giocatore").innerHTML ="Il giocatore ha ottenuto " + numeroGiocatore;
-
-        const numeroPc = Math.floor(Math.random() * 6) + 1;    
-        console.log("numero del PC " + numeroPc);
-        document.getElementById("pc").innerHTML ="Il Pc ha ottenuto " + numeroPc;
-
-    let gioco        
-
-
-        if (numeroGiocatore === numeroPc) {
-            console.log("pareggio");
-        }
-
-        else if (numeroGiocatore > numeroPc) {
-            console.log("giocatore vince");
-        }
-
-        else {
-            console.log("pc vince");
-        }
+    // pulsante per iniziare il gioco
+function lancio(){
     
+        // numero random per il giocatore
+    const numeroGiocatore = Math.floor(Math.random() * 6) + 1;
+       
+    document.getElementById("giocatore").innerHTML ="Il giocatore ha ottenuto " + numeroGiocatore;
+    // console.log("numero del giocatore " + numeroGiocatore);
+
+
+        // numero random per il PC
+    const numeroPc = Math.floor(Math.random() * 6) + 1;    
+    
+    document.getElementById("pc").innerHTML ="Il Pc ha ottenuto " + numeroPc;
+    // console.log("numero del PC " + numeroPc);
+
+    //risultato
+let gioco     
+
+    if (numeroGiocatore === numeroPc) {
+
+        gioco = "Pareggio"
+        // console.log("Pareggio");
+    }else if (numeroGiocatore > numeroPc) {
+        gioco = "Vince il giocatore"
+        // console.log("giocatore vince");
+    }else {
+        gioco = "Vince il PC"
+        // console.log("pc vince");
+    }
+    document.getElementById("gioco").innerHTML = gioco;
+}
