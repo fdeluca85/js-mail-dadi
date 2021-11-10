@@ -32,4 +32,4 @@ if (sentinella) {
 } else {
     console.log('non in lista');
 }
-   
+container.innerHTML = "Benvenuto";
