@@ -1,4 +1,4 @@
-//Mail Chiedi all’utente la sua email, controlla che sia nella lista di chi può accedere, stampa un messaggio appropriato sull’esito del controllo.
+//Chiedi all’utente la sua email, controlla che sia nella lista di chi può accedere, stampa un messaggio appropriato sull’esito del controllo.
 
 // alert ('ciao')
 
@@ -11,7 +11,7 @@ const mailUtente = prompt('Inserisci la tua e-mail');
 const validazione = /^[_a-z0-9+-]+(\.[_a-z0-9+-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)+$/;
 	if (!validazione.test(mailUtente))
 	{
-	    alert("L'indirizzo email non è valido!");
+	    alert("Hai inserito " + mailUtente + ", non è un indirizzo email valido");
 	}
 
     // lista degli indirizzi email che hanno accesso
@@ -28,8 +28,8 @@ for (let i = 0; i < accessList.length; i++){
     } 
 }  
 if (sentinella) {
-    console.log('Benvenuto ' + mailUtente );
+    // console.log('Benvenuto ' + mailUtente );
 } else {
-    console.log('non in lista');
+    // console.log('non in lista');
 }
-container.innerHTML = "Benvenuto";
+container.innerHTML = "Benvenuto " + mailUtente;
